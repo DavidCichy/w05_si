@@ -74,3 +74,33 @@ def cyclic_rotation(input_string, rotation):
     new_string = ''.join(new_string_list)
 
     return new_string
+
+
+def poker_hand(cards_on_hand):
+    '''
+    Write a poker_hand function that will score a poker hand. 
+    The function will take an array 5 numbers and 
+    return a string based on what is inside. 
+    It should recognize the following patterns:
+    five 	five of a kind 	[1, 1, 1, 1, 1]
+    four 	four of a kind 	[2, 2, 2, 2, 3]
+    three 	three of a kind 	[1, 1, 1, 2, 3]
+    twopairs 	two pairs 	[2, 2, 3, 3, 4]
+    pair 	a single pair 	[1, 2, 2, 3, 4]
+    fullhouse 	a pair and a three 	[1, 1, 2, 2, 2]
+    nothing 	none of the above 	[1, 2, 3, 4, 6]
+    
+    >>> poker_hand([1, 1, 1, 1, 1])
+    five
+    >>> poker_hand([2, 2, 2, 2, 3])
+    four
+    >>> poker_hand([2, 2, 3, 3, 4])
+    twopairs
+    >>> poker_hand([1, 2, 2, 3, 4])
+    pair
+    >>> poker_hand([1, 1, 2, 2, 2])
+    fullhouse
+    >>> poker_hand([1, 2, 3, 4, 6])
+    nothing
+    '''
+    pass
