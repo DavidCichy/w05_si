@@ -15,6 +15,7 @@ fullhouse 	a pair and a three 	[1, 1, 2, 2, 2]
 nothing 	none of the above 	[1, 2, 3, 4, 6]
 '''
 
+
 def most_frequent_number_in_array(array):
     '''
     Check what is the most frequent number in an array.
@@ -22,8 +23,19 @@ def most_frequent_number_in_array(array):
     >>> most_frequent_number_in_array([3, 3, 3, 2, 2, 2, 4, 4])
     3
 
-   >>> most_frequent_number_in_array([3, 3, 3, 5, 5, 5,7, 7, 0, 2, 2, 2])
+    >>> most_frequent_number_in_array([3, 3, 3, 5, 5, 5, 7, 7, 0, 2, 2, 2])
     5
     '''
-    pass
-
+    array.sort()
+    dict_of_array = {}
+    highest_number_frequency = 0
+    for number in array:
+        if number in dict_of_array.keys():
+            dict_of_array[number] +=1
+        else:
+            dict_of_array[number] = 1
+    for number in dict_of_array:
+        if dict_of_array[number] >= highest_number_frequency:
+            highest_number_frequency = dict_of_array[number]
+            most_frequent_number = number
+    return most_frequent_number
