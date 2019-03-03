@@ -14,3 +14,16 @@ pair 	a single pair 	[1, 2, 2, 3, 4]
 fullhouse 	a pair and a three 	[1, 1, 2, 2, 2]
 nothing 	none of the above 	[1, 2, 3, 4, 6]
 '''
+
+def most_frequent_number_in_array(array):
+    '''
+    Check what is the most frequent number in an array.
+
+    >>> most_frequent_number_in_array([3, 3, 3, 2, 2, 2, 4, 4])
+    3
+
+   >>> most_frequent_number_in_array([3, 3, 3, 5, 5, 5,7, 7, 0, 2, 2, 2])
+    5
+    '''
+    pass
+
