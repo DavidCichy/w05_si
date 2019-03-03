@@ -14,11 +14,10 @@ def is_anagram(a, b):
     >>> is_anagram('aab', 'abb')
     False
     '''
-
-    for letter in a:
-        if letter not in b:
-            return False
-    for letter in b:
-        if letter not in a:
-            return False
-    return True
+    a_in_list = list(a)
+    b_in_list = list(b)
+    a_in_list.sort()
+    b_in_list.sort()
+    if  a_in_list == b_in_list:
+        return True
+    return False
