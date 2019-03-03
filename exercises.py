@@ -76,6 +76,12 @@ def cyclic_rotation(input_string, rotation):
     return new_string
 
 
+def poker_hand_check_if_five(cards_on_hand):
+    for i in range(5): 
+        if cards_on_hand [i] != cards_on_hand[0]:
+            return False
+    return True
+
 def poker_hand(cards_on_hand):
     '''
     Write a poker_hand function that will score a poker hand. 
@@ -91,16 +97,19 @@ def poker_hand(cards_on_hand):
     nothing 	none of the above 	[1, 2, 3, 4, 6]
     
     >>> poker_hand([1, 1, 1, 1, 1])
-    five
+    'five'
     >>> poker_hand([2, 2, 2, 2, 3])
-    four
+    'four'
     >>> poker_hand([2, 2, 3, 3, 4])
-    twopairs
+    'twopairs'
     >>> poker_hand([1, 2, 2, 3, 4])
-    pair
+    'pair'
     >>> poker_hand([1, 1, 2, 2, 2])
-    fullhouse
+    'fullhouse'
     >>> poker_hand([1, 2, 3, 4, 6])
-    nothing
+    'nothing'
     '''
-    pass
+    if poker_hand_check_if_five(cards_on_hand):
+        return 'five'
+    else:
+        return 'nothing'
