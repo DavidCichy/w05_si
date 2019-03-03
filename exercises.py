@@ -41,12 +41,32 @@ def most_frequent_number_in_array(array):
             highest_number_frequency = dict_of_array[number]
             most_frequent_number = number
     return most_frequent_number
-def cyclic_rotation(string):
+
+
+def cyclic_rotation(input_string, rotation):
     '''
     Calculate a cyclic rotation of a string; 
     i.e. move the last N elements from the end to the beginning. 
     For example, cyclic_rotation('abcde', 2) should return 'deabc'.
     >>> cyclic_rotation('abcde', 2)
-    deabc
+    'deabc'
     '''
-    pass
+    string_list = list(input_string)
+    string_len = len(input_string)
+    string_last_index = string_len - 1
+    new_string_list = list(input_string)
+    string_character_id = 0
+    new_string = ""
+
+    for character in string_list:
+        new_string_character_id = string_character_id + rotation
+        
+        if new_string_character_id > string_last_index:
+            new_string_character_id -= string_len
+
+        new_string_list[new_string_character_id] = str(character)
+        string_character_id += 1
+
+    new_string = ''.join(new_string_list)
+
+    return new_string
