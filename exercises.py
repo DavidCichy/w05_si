@@ -29,13 +29,24 @@ def most_frequent_number_in_array(array):
     array.sort()
     dict_of_array = {}
     highest_number_frequency = 0
+
     for number in array:
         if number in dict_of_array.keys():
             dict_of_array[number] +=1
         else:
             dict_of_array[number] = 1
+
     for number in dict_of_array:
         if dict_of_array[number] >= highest_number_frequency:
             highest_number_frequency = dict_of_array[number]
             most_frequent_number = number
     return most_frequent_number
+def cyclic_rotation(string):
+    '''
+    Calculate a cyclic rotation of a string; 
+    i.e. move the last N elements from the end to the beginning. 
+    For example, cyclic_rotation('abcde', 2) should return 'deabc'.
+    >>> cyclic_rotation('abcde', 2)
+    deabc
+    '''
+    pass
