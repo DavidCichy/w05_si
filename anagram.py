@@ -11,6 +11,8 @@ def is_anagram(a, b):
     False
     >>> is_anagram('abc', 'defgh')
     False
+    >>> is_anagram('aab', 'abb')
+    False
     '''
 
     for letter in a:
