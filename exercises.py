@@ -81,6 +81,8 @@ def poker_hand(cards_on_hand):
     'four'
     >>> poker_hand([2, 2, 3, 3, 4])
     'twopairs'
+    >>> poker_hand([2, 2, 2, 3, 4])
+    'three'
     >>> poker_hand([1, 2, 2, 3, 4])
     'pair'
     >>> poker_hand([1, 1, 2, 2, 2])
@@ -98,7 +100,6 @@ def poker_hand(cards_on_hand):
     
     elif poker_hand_logic.check_if_fullhouse(cards_dict):
         return 'fullhouse'
-    
     
     elif poker_hand_logic.check_if_three(cards_dict):
         return 'three'
