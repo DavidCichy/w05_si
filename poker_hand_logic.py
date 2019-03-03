@@ -26,7 +26,7 @@ def check_if_four(cards_dict):
 def check_if_three(cards_dict):
     for key in cards_dict:
         if cards_dict[key] == 3:
-                return True
+            return True
     return False
 
 
@@ -48,5 +48,11 @@ def check_if_twopairs(cards_dict):
 def check_if_pair(cards_dict):
     pair_count = count_pairs(cards_dict)
     if pair_count == 1:
+        return True
+    return False
+
+
+def check_if_fullhouse(cards_dict):
+    if check_if_three(cards_dict) and check_if_pair(cards_dict): 
         return True
     return False
