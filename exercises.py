@@ -50,6 +50,10 @@ def cyclic_rotation(input_string, rotation):
     For example, cyclic_rotation('abcde', 2) should return 'deabc'.
     >>> cyclic_rotation('abcde', 2)
     'deabc'
+    >>> cyclic_rotation('abvba', 5)
+    'abvba'
+    >>> cyclic_rotation('abcde', -2)
+    'cdeab'
     '''
     string_list = list(input_string)
     string_len = len(input_string)
