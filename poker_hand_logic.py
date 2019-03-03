@@ -19,3 +19,9 @@ def check_if_four(cards_dict):
         if cards_dict[key] == 4:
                 return True
     return False
+
+def check_if_three(cards_dict):
+    for key in cards_dict:
+        if cards_dict[key] == 3:
+                return True
+    return False
