@@ -88,7 +88,7 @@ def poker_hand(cards_on_hand):
     >>> poker_hand([1, 2, 3, 4, 6])
     'nothing'
     '''
-
+    cards_dict = poker_hand_logic.make_dictonary_of_hand(cards_on_hand)
     if poker_hand_logic.check_if_five(cards_on_hand):
         return 'five'
     else:
