@@ -102,8 +102,8 @@ def poker_hand(cards_on_hand):
     if poker_hand_logic.check_if_twopairs(cards_dict):
         return 'twopairs'
     
-    if poker_hand_logic.check_if_five(cards_dict):
-        return 'five'
+    if poker_hand_logic.check_if_pair(cards_dict):
+        return 'pair'
     
     else:
         return 'nothing'
